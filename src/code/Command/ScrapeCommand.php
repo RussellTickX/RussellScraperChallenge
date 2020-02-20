@@ -64,7 +64,7 @@ class ScrapeCommand extends Command
             }
         }
 
-        return 0;
+        return 'Successful Run';
     }
 
     private function getEventFromPage($eventPage)
