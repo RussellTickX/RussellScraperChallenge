@@ -17,3 +17,4 @@ services:
     environment:
       MYSQL_DATABASE: "tickx"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: ""

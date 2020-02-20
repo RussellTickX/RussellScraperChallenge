@@ -107,11 +107,13 @@ class Event
     {
         //TODO
         $database = Database::getConnection();
+        var_dump($database);
+        die;
     }
 
     public function save()
     {
-//        $this->getByCriteria(['remoteId' => $this->getRemoteId()]);
+        $this->getByCriteria(['remoteId' => $this->getRemoteId()]);
         //TODO
         var_dump($this);
         return true;

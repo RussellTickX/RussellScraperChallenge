@@ -6,10 +6,10 @@ use Medoo\Medoo;
 
 class Database
 {
-    const DB_USER = '';
+    const DB_USER = 'root';
     const DB_PASS = '';
     const DB_NAME = 'tickx';
-    const DB_SERVER = 'localhost';
+    const DB_SERVER = '127.0.0.1';
 
 
     public static function getConnection()
