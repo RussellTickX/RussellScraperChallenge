@@ -5,7 +5,8 @@ namespace TickX\Scraper\Model;
 class Event
 {
 
-    protected $uuid;
+    protected $id;
+    protected $remoteId;
     protected $title;
     protected $date;
     protected $time;
@@ -13,6 +14,17 @@ class Event
     protected $description;
     protected $tickets;
     protected $venueName;
+
+    public function getRemoteId()
+    {
+        return $this->remoteId;
+    }
+
+    public function setRemoteId($remoteId)
+    {
+        $this->remoteId = $remoteId;
+        return $this;
+    }
 
     public function getTitle()
     {
@@ -89,6 +101,20 @@ class Event
     {
         $this->venueName = $venueName;
         return $this;
+    }
+
+    public function getByCriteria($criteria)
+    {
+        //TODO
+        $database = Database::getConnection();
+    }
+
+    public function save()
+    {
+//        $this->getByCriteria(['remoteId' => $this->getRemoteId()]);
+        //TODO
+        var_dump($this);
+        return true;
     }
 
 }
