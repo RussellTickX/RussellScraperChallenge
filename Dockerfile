@@ -21,3 +21,5 @@ RUN docker-php-ext-install mbstring pdo_mysql
 RUN pecl config-set php_ini /etc/php.ini
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN sed -i 's/CipherString = DEFAULT@SECLEVEL=2/CipherString= DEFAULT@SECLEVEL=1/' /etc/ssl/openssl.cnf
